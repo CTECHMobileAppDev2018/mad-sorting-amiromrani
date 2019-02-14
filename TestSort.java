@@ -4,7 +4,25 @@ import java.util.Scanner;
 
 class TestSort
 {
+   public void arraySwapAny(double []inputArray, int loc1, int loc2) {
+    
+    double temp;
+    temp = inputArray[loc1];
+    inputArray[loc1] = inputArray[loc2];
+    inputArray[loc2] = temp;
+  }
   
+  // start and end are optional - some sorting algorithms use them, but you can ignore them
+  void sort(double arr[], long start, long end) 
+  { 
+    for (int j =0; j < arr.length; j++) {
+      for (int i = 0; i < arr.length - 1; i++) {
+        if (arr[i] > arr[i+1]) {
+          arraySwapAny(arr, i,i+1);
+        }
+      }
+    } 
+  }
   // yes, I should have called the sorter class something other than "Main"
   
     // Test program 
